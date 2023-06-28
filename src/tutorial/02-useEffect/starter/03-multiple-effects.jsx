@@ -4,13 +4,13 @@ const MultipleEffects = () => {
   const [value, setValue] = useState(0);
   const [secondValue, setSecondValue] = useState(0);
 
-  // useEffect(() => {
-  //   console.log('hello from first useEffect');
-  // }, []);
+  useEffect(() => {
+    console.log('hello from first useEffect');
+  }, [value]);
 
-  // useEffect(() => {
-  //   console.log('hello from second useEffect');
-  // }, []);
+  useEffect(() => {
+    console.log('hello from second useEffect');
+  }, []);
   return (
     <div>
       <h1>value : {value}</h1>
@@ -25,3 +25,7 @@ const MultipleEffects = () => {
   );
 };
 export default MultipleEffects;
+
+//Lesson
+//If you want to run a useEffect when a state changes, add that state to the second arg
+//ex: see ln 9
