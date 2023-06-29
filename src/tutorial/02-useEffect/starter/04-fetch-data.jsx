@@ -10,19 +10,30 @@ const FetchData = () => {
       try {
         const response = await fetch(url)
         const data = await response.json()
-        console.log(data[0])
+        setUser(data) 
       } catch (error) {
         console.log('error')
       }
     }
-    setUser(dataPoll())
+    dataPoll()
   }, [])
 
   return (
     <>
         <h2>fetch data example</h2>
-        <h4>{user.login}</h4>
-        {console.log(user.login)}
+        <ul className='users'>
+          {user.map((item) => {
+            return (
+                <li key={item.id}>
+                <img src={item.avatar_url}/>
+                <div>
+                  <h4>{item.login}</h4>
+                  <a href={item.html_url}>profile</a>
+                </div>
+                </li>
+            )
+          })}
+        </ul>
     </>
   ) 
 };
