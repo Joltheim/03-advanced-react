@@ -11,6 +11,7 @@ const MultipleReturnsFetchData = () => {
       try {
         const response = await fetch(url)
         const data = await response.json()
+        console.log(data)
         setUser(data)
       } catch (error) {
         console.log('error')
@@ -27,12 +28,14 @@ const MultipleReturnsFetchData = () => {
   if (isError) {
     return <h2>Error!!!</h2>
   }
+  //destructure user object
+  const { name, avatar_url, company, bio } = user
   return (
     <>
-      <img style={{width:'150px', borderRadius:'25px'}} src={user.avatar_url}></img>
-      <h2>{user.name}</h2>
-      <h4>works at {user.company}</h4>
-      <h4>{user.bio}</h4>
+      <img style={{width:'150px', borderRadius:'25px'}} src={avatar_url}></img>
+      <h2>{name}</h2>
+      <h4>works at {company}</h4>
+      <h4>{bio}</h4>
     </>
   )
 };
@@ -41,3 +44,7 @@ export default MultipleReturnsFetchData;
 //Lesson
 //*note* try / catch block does not consider 404 errors to be wrong
 //Axios will catch these problems though (to be covered later)
+//
+//Additionally if you have multiple returns and wish to destructure
+//you have to be careful to only do so after object is given properties
+//i.e. in this case after fetchData() updates user value via setUser()

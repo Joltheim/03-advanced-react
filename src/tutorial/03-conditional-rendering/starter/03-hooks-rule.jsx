@@ -18,3 +18,6 @@ const Example = () => {
 };
 
 export default Example;
+
+//Lesson
+//be careful when you return, rest of code will not be read
