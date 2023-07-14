@@ -1,16 +1,14 @@
-import List from './tutorial/05-leverage-javascript/starter/List'
-import Person from './tutorial/05-leverage-javascript/starter/Person'
+import Starter from '../src/tutorial/06-forms/starter/02-user-challenge'
 
 function App() {
   return (
     <div className ='container'>
-      <List />
-      <Person />
+      <Starter />
     </div>
   );
 }
 
 export default App;
 
-//current timestamp: 7:52:26
-//https://youtu.be/2-crBg6wpp0?t=28346
+//current timestamp: 8:08:03
+//https://youtu.be/2-crBg6wpp0?t=29283
