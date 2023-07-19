@@ -1,4 +1,4 @@
-import Starter from '../src/tutorial/06-forms/starter/02-user-challenge'
+import Starter from '../src/tutorial/06-forms/starter/05-form-data.jsx'
 
 function App() {
   return (
@@ -10,5 +10,5 @@ function App() {
 
 export default App;
 
-//current timestamp: 8:08:03
-//https://youtu.be/2-crBg6wpp0?t=29283
+//current timestamp: 8:40:31
+//https://youtu.be/2-crBg6wpp0?t=31231

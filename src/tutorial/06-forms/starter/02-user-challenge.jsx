@@ -41,7 +41,7 @@ const UserChallenge = () => {
       {person.map((item) => {
         const { id, name } = item
         return (
-          <div style={{display: 'flex', justifyContent: 'center', margin: '1em'}} key={id}>
+          <div style={{display: 'flex', justifyContent: 'center', margin: '1.5em'}} key={id}>
             <h4>{name}</h4>
             <button className='btn' style={{marginLeft: '.5em'}} onClick={() => removeUser(id)}>delete</button>
           </div>
