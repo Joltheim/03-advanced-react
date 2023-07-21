@@ -6,10 +6,14 @@ const UncontrolledInputs = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget)
-    console.log(formData)
-    const name = formData.get('name')
-    const email = formData.get('email')
-    console.log('name: ' + name + ' email: ' + email)
+    // console.log(formData)
+    // const email = formData.get('email')
+    // console.log('name: ' + name + ' email: ' + email)
+    // console.log([...formData.entries()])
+    const newUser = Object.fromEntries(formData)
+    console.log(newUser)
+    setValue(value + 1)
+    e.currentTarget.reset()  //clears out input fields
   };
   return (
     <div>
@@ -50,3 +54,9 @@ const UncontrolledInputs = () => {
   );
 };
 export default UncontrolledInputs;
+
+//Lesson
+//Don't always need controlled input
+//in such a case you can instead use the JS method shown in handleSubmit()
+
+//
